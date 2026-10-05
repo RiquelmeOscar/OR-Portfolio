@@ -42,7 +42,35 @@ a:hover { color: var(--accent-hover); }
 
 .logo { color: #fff; font-weight: 800; font-size: 1.1rem; letter-spacing: 1px; }
 
-.nav ul { display: flex; gap: 24px; list-style: none; }
+.nav ul { display: flex; gap: 24px; list-style: none; align-items: center; }
+
+.lang-switch { display: flex; gap: 4px; margin-left: 8px; }
+
+.lang-btn {
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  color: #d7d9e8;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.lang-btn:hover { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
+.lang-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lang-btn:active { transform: translateY(1px); }
+
+.lang-btn.active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.lang-btn.active:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
 .nav a { color: #d7d9e8; font-size: 0.95rem; font-weight: 500; }
 .nav a:hover { color: #fff; }
 .nav .logo:hover { color: var(--accent); }
@@ -143,6 +171,8 @@ footer {
 @media (max-width: 700px) {
   .hero h1 { font-size: 2.1rem; }
   .grid-two { grid-template-columns: 1fr; }
-  .nav ul { gap: 14px; }
+  .nav ul { gap: 14px; flex-wrap: wrap; justify-content: center; }
   .nav a { font-size: 0.85rem; }
+  .lang-switch { margin-left: 0; }
+  .lang-btn { font-size: 0.75rem; padding: 4px 8px; }
 }
