@@ -8,6 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <nav class="nav">
@@ -21,6 +30,9 @@
         <li class="lang-switch" role="group" data-i18n-aria-label="nav.langSwitch" aria-label="Cambiar idioma / Switch language">
           <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
           <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </li>
+        <li>
+          <button type="button" class="theme-btn" id="theme-toggle" data-i18n-aria-label="nav.themeToggle" aria-label="Cambiar tema / Toggle theme" title="Cambiar tema / Toggle theme">🌙</button>
         </li>
       </ul>
     </div>

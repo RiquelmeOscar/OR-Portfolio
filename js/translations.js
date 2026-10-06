@@ -10,6 +10,7 @@ const TRANSLATIONS = {
       about: 'Sobre mí',
       contact: 'Contacto',
       langSwitch: 'Cambiar idioma / Switch language',
+      themeToggle: 'Cambiar tema / Toggle theme',
     },
     hero: {
       location: 'Buenos Aires, Argentina',
@@ -73,6 +74,7 @@ const TRANSLATIONS = {
       about: 'About',
       contact: 'Contact',
       langSwitch: 'Switch language / Cambiar idioma',
+      themeToggle: 'Toggle theme / Cambiar tema',
     },
     hero: {
       location: 'Buenos Aires, Argentina',
